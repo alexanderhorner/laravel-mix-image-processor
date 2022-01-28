@@ -1,0 +1,21 @@
+{
+  "name": "package-template",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/alexanderhorner/package-template#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexanderhorner/package-template.git"
+  },
+  "main": "index.js",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "tsc; cd test; tsc"
+  },
+  "author": "Alexander Horner",
+  "license": "GPL-3.0-or-later"
+}
