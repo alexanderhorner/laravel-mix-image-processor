@@ -12,7 +12,7 @@ class ImageProcessor {
      *
      * @return {String|Array}
      */
-    name() {
+    static name() {
         return ['imageProcessor', 'img', 'images']
     }
 
@@ -43,26 +43,6 @@ class ImageProcessor {
     }
 
     /**
-     * Boot the component. This method is triggered after the
-     * user's webpack.mix.js file has processed.
-     */
-    boot() {
-        // Example:
-        // if (Config.options.foo) {}
-    }
-
-    /**
-     * Append to the underlying webpack entry object.
-     *
-     * @param  {Entry} entry
-     * @return {void}
-     */
-    webpackEntry(entry) {
-        // Example:
-        // entry.add('foo', 'bar');
-    }
-
-    /**
      * Rules to be merged with the underlying webpack rules.
      *
      * @return {Array|Object}
@@ -82,9 +62,11 @@ class ImageProcessor {
      * @return {void}
      */
     webpackConfig(webpackConfig) {
-        webpackConfig.module.rules[1].test = /(\\.(gif|avif)$|^((?!font).)*\\.svg$)/
+        let rules = webpackConfig.module.rules
+        let rule = rules.find(rule => rule.test == '/(\\.(png|jpe?g|gif|webp|avif)$|^((?!font).)*\\.svg$)/');
+        rule.test = /(\\.(gif|avif)$|^((?!font).)*\\.svg$)/
     }
 
 }
 
-mix.extend('imageProcessor', new ImageProcessor());
+mix.extend(ImageProcessor.name(), new ImageProcessor());

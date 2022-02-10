@@ -1,13 +1,13 @@
 {
-  "name": "package-template",
+  "name": "laravel-mix-image-processor",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/alexanderhorner/package-template#readme",
+  "homepage": "https://github.com/alexanderhorner/laravel-mix-image-processor#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexanderhorner/package-template.git"
+    "url": "https://github.com/alexanderhorner/laravel-mix-image-processor.git"
   },
-  "main": "src/index.js",
+  "main": "./src/index.js",
   "files": [
     "/src"
   ],
